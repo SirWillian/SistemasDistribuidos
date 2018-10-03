@@ -64,5 +64,11 @@ public class ServImpl extends UnicastRemoteObject implements InterfaceServ {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    public void registrarVoo(LocalDate da, String de, int p, int av){
+        
+    }
     
+    public void registrarHotel(){
+        
+    }
 }
