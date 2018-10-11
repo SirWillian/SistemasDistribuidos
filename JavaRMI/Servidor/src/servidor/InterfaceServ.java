@@ -5,6 +5,7 @@
  */
 package servidor;
 
+import enums.EnumTipoInteresse;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.time.LocalDate;
@@ -20,8 +21,6 @@ public interface InterfaceServ extends Remote{
     public List consultarPassagem(boolean idaVolta, String origem, String destino, LocalDate dataIda, LocalDate dataVolta, int nPessoas) throws RemoteException;
     public void comprarReserva(Reserva reserva) throws RemoteException;
     public void comprarPassagem(PassagemAerea passagem) throws RemoteException;
-    public void registrarInteresse(InterfaceCliente cliente, PassagemAerea passagem) throws RemoteException;
-    public void registrarInteresse(InterfaceCliente cliente, Reserva reserva) throws RemoteException;
-    public void cancelarInteresse(InterfaceCliente cliente, PassagemAerea passagem) throws RemoteException;
-    public void cancelarInteresse(InterfaceCliente cliente, Reserva reserva) throws RemoteException;
+    public void registrarInteresse(InterfaceCliente cliente, EnumTipoInteresse tipo, int precoMaximo) throws RemoteException;
+    public void cancelarInteresse(InterfaceCliente cliente, EnumTipoInteresse tipo) throws RemoteException;
 }

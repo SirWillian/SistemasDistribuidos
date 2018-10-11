@@ -12,13 +12,15 @@ import java.time.LocalDate;
  * @author a1717553
  */
 public class Reserva {
+    public String nome;
     public String destino;
     public LocalDate dataIda;
     public LocalDate dataVolta;
     public int nQuartos;
     public int nPessoas;
     
-    public Reserva(String d, LocalDate di, LocalDate dv, int q, int p){
+    public Reserva(String n, String d, LocalDate di, LocalDate dv, int q, int p){
+        this.nome=n;
         this.destino=d;
         this.dataIda=di;
         this.dataVolta=dv;

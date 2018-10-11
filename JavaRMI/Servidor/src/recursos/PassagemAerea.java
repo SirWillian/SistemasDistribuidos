@@ -15,14 +15,16 @@ public class PassagemAerea {
     public boolean idaVolta;
     public String origem;
     public String destino;
+    public String companhia;
     public LocalDate dataIda;
     public LocalDate dataVolta;
     public int nPessoas;
     
-    public PassagemAerea(boolean iv, String o, String d, LocalDate di, LocalDate dv, int np){
+    public PassagemAerea(boolean iv, String o, String d, String c, LocalDate di, LocalDate dv, int np){
         this.idaVolta=iv;
         this.origem=o;
         this.destino=d;
+        this.companhia=c;
         this.dataIda=di;
         this.dataVolta=dv;
         this.nPessoas=np;
