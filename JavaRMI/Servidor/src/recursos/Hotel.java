@@ -5,11 +5,13 @@
  */
 package recursos;
 
+import java.io.Serializable;
+
 /**
  *
  * @author a1717553
  */
-public class Hotel {
+public class Hotel implements Serializable{
     public String nome;
     public String local;
     public int precoQuarto;
@@ -20,5 +22,10 @@ public class Hotel {
         this.local=l;
         this.precoQuarto=p;
         this.quartosVagos=q;
+    }
+    
+    @Override
+    public String toString(){
+        return(nome + " - " + local + " - R$" + precoQuarto + " - " + quartosVagos);
     }
 }

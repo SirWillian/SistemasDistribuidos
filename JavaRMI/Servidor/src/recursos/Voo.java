@@ -5,13 +5,17 @@
  */
 package recursos;
 
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /**
  *
  * @author a1717553
  */
-public class Voo {
+public class Voo implements Serializable{
+    //private static final long serialVersionUID = 1L;
+    
     public LocalDate data;
     public String origem;
     public String destino;
@@ -26,5 +30,12 @@ public class Voo {
         this.companhia=c;
         this.preco=p;
         this.assentosVagos=av;
+    }
+    
+    @Override
+    public String toString(){
+        return(DateTimeFormatter.ofPattern("d/MM/yyyy").format(data)+
+                " - " + origem + " - " + destino + " - " + companhia+
+                " - R$" + preco + " - " + assentosVagos);
     }
 }

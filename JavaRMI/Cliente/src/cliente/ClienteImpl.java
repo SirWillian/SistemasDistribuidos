@@ -22,7 +22,7 @@ public class ClienteImpl extends UnicastRemoteObject implements InterfaceCliente
     
     @Override
     public void callback(String mensagem) throws RemoteException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println(mensagem);
     }
     
 }

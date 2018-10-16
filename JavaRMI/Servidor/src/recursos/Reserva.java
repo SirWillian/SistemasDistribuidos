@@ -5,13 +5,14 @@
  */
 package recursos;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
  *
  * @author a1717553
  */
-public class Reserva {
+public class Reserva implements Serializable{
     public String nome;
     public String destino;
     public LocalDate dataIda;
