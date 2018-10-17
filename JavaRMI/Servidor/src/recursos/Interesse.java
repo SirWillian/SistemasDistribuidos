@@ -15,11 +15,13 @@ import servidor.InterfaceCliente;
 public class Interesse {
     public InterfaceCliente cliente;
     public EnumTipoInteresse tipo;
+    public String destino;
     public int precoMaximo;
     
-    public Interesse(InterfaceCliente cli, EnumTipoInteresse t, int p){
+    public Interesse(InterfaceCliente cli, EnumTipoInteresse t, String d, int p){
         this.cliente=cli;
         this.tipo=t;
+        this.destino=d;
         this.precoMaximo=p;
     }
 }

@@ -20,6 +20,6 @@ public interface InterfaceServ extends Remote{
     public List<Voo> consultarPassagem(boolean idaVolta, String origem, String destino, LocalDate data, int nPessoas) throws RemoteException;
     public boolean comprarReserva(Reserva reserva) throws RemoteException;
     public boolean comprarPassagem(PassagemAerea passagem) throws RemoteException;
-    public void registrarInteresse(InterfaceCliente cliente, EnumTipoInteresse tipo, int precoMaximo) throws RemoteException;
+    public void registrarInteresse(InterfaceCliente cliente, EnumTipoInteresse tipo, String destino, int precoMaximo) throws RemoteException;
     public void cancelarInteresse(InterfaceCliente cliente, EnumTipoInteresse tipo) throws RemoteException;
 }

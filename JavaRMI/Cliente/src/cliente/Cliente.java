@@ -57,7 +57,10 @@ public class Cliente {
                         System.out.println("Insira o preço máximo que está disposto a pagar:");
                         int precoMaximo = Integer.valueOf(scanner.nextLine());
                         
-                        servidorSamba.registrarInteresse(cliente, EnumTipoInteresse.values()[tipo-1], precoMaximo);
+                        System.out.println("Insira o destino no qual está interessado:");
+                        String destino = scanner.nextLine();
+                        
+                        servidorSamba.registrarInteresse(cliente, EnumTipoInteresse.values()[tipo-1], destino, precoMaximo);
                         break;
                     case "ci":
                         System.out.println("Insira o número do tipo de interesse que deseja cancelar.");
@@ -79,7 +82,6 @@ public class Cliente {
                         LocalDate dataPartida;
                         LocalDate dataVolta=null;
                         String origem;
-                        String destino;
                         int nPessoas;
                         try{
                             System.out.println("Insira a data de partida (formato dd/mm/aaaa)");

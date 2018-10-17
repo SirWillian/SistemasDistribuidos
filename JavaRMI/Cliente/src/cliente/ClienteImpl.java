@@ -20,6 +20,12 @@ public class ClienteImpl extends UnicastRemoteObject implements InterfaceCliente
         this.servidor=s;
     }
     
+    /**
+     * Método de callback do cliente (mostra a notificação recebida do servidor)
+     * 
+     * @param mensagem
+     * @throws RemoteException
+     */
     @Override
     public void callback(String mensagem) throws RemoteException {
         System.out.println(mensagem);
