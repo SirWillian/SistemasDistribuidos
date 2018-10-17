@@ -18,8 +18,10 @@ import recursos.*;
 public interface InterfaceServ extends Remote{
     public List<Hotel> consultarHotel(String destino, LocalDate dataIda, LocalDate dataVolta, int nQuartos, int nPessoas) throws RemoteException;
     public List<Voo> consultarPassagem(boolean idaVolta, String origem, String destino, LocalDate data, int nPessoas) throws RemoteException;
+    public List<Pacote> consultarPacote(String origem, String destino, LocalDate dataIda, LocalDate dataVolta, int nPessoas, int nQuartos) throws RemoteException;
     public boolean comprarReserva(Reserva reserva) throws RemoteException;
     public boolean comprarPassagem(PassagemAerea passagem) throws RemoteException;
+    public boolean comprarPacote(Pacote pacote, int nPessoas, int nQuartos) throws RemoteException;
     public void registrarInteresse(InterfaceCliente cliente, EnumTipoInteresse tipo, String destino, int precoMaximo) throws RemoteException;
     public void cancelarInteresse(InterfaceCliente cliente, EnumTipoInteresse tipo) throws RemoteException;
 }

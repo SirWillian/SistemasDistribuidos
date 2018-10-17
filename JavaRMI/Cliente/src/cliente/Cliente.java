@@ -43,9 +43,14 @@ public class Cliente {
                     case "?":
                         System.out.println("'cv' - Consulta e compra de passagens aéreas;");
                         System.out.println("'ch' - Consulta e reserva de quartos de hotel;");
+                        System.out.println("'cp' - Consulta e compra de pacotes de viagem;");
                         System.out.println("'ri' - Registro de interesse;");
-                        System.out.println("'ci' - Cancelamento de interesse.");
+                        System.out.println("'ci' - Cancelamento de interesse;");
+                        System.out.println("'exit' - Sai do programa.");
                         break;
+                        
+                    case "exit":
+                        System.exit(0);
                         
                     case "ri":
                         System.out.println("Insira um número de 1 a 3.");
@@ -199,6 +204,54 @@ public class Cliente {
                         Reserva reserva = new Reserva(hotel.nome, hotel.local, dataPartida, dataVolta, nQuartos, nPessoas);
                         if(servidorSamba.comprarReserva(reserva))
                             System.out.println("Sua reserva foi feita com sucesso!");
+                        else
+                            System.out.println("Sua compra não pôde ser efetuada. Tente novamente.");
+                        break;
+                        
+                    case "cp":
+                        formatter = DateTimeFormatter.ofPattern("d/MM/yyyy");
+                        try{
+                            System.out.println("Insira a data de partida (formato dd/mm/aaaa)");
+                            dataPartida = LocalDate.parse(scanner.nextLine(),formatter);
+                            
+                            System.out.println("Insira a data de volta (formato dd/mm/aaaa)");
+                            dataVolta = LocalDate.parse(scanner.nextLine(),formatter);
+                            
+                            System.out.println("Insira a origem da viagem:");
+                            origem = scanner.nextLine();
+
+                            System.out.println("Insira o destino da viagem:");
+                            destino = scanner.nextLine();
+
+                            System.out.println("Insira o número de pessoas da viagem:");
+                            nPessoas = Integer.valueOf(scanner.nextLine());
+                            
+                            System.out.println("Insira o número de quartos desejados:");
+                            nQuartos = Integer.valueOf(scanner.nextLine());
+                        }
+                        catch(DateTimeException ex){
+                            System.out.println("Por favor insira a data no formato coreto");
+                            break;
+                        }
+                        catch(NumberFormatException ex){
+                            System.out.println("Por favor insira um número");
+                            break;
+                        }
+                        
+                        List<Pacote> listaPacotes = servidorSamba.consultarPacote(origem, destino, dataPartida, dataVolta, nPessoas, nQuartos);
+                        indice=1;
+                        System.out.println("Indice - Origem - Destino - Nome do Hotel - Preço");
+                        for(Pacote pacote : listaPacotes){
+                            System.out.println(indice + " - " + pacote.toString());
+                            indice++;
+                        }
+                        System.out.println("Insira o índice do pacote que deseja comprar (0 para sair)");
+                        escolha = Integer.valueOf(scanner.nextLine());
+                        if(escolha==0)
+                            break;
+                        Pacote pacote = listaPacotes.get(escolha-1);
+                        if(servidorSamba.comprarPacote(pacote, nPessoas, nQuartos))
+                            System.out.println("Seu pacote foi comprado com sucesso!");
                         else
                             System.out.println("Sua compra não pôde ser efetuada. Tente novamente.");
                         break;

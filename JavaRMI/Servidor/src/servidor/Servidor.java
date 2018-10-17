@@ -36,8 +36,10 @@ public class Servidor {
                     case "?":
                         System.out.println("'rh' - Registro de um novo hotel;");
                         System.out.println("'rv' - Registro de um novo voo;");
+                        System.out.println("'rp' - Registro de um novo pacote de viagens;");
                         System.out.println("'lh' - Listar hotéis registrados;");
-                        System.out.println("'lv' - Listar voos registrados.");
+                        System.out.println("'lv' - Listar voos registrados;");
+                        System.out.println("'lp' - Listar pacotes registrados.");
                         break;
                     case "rh":
                         System.out.println("Nome do hotel: ");
@@ -48,7 +50,7 @@ public class Servidor {
                         int precoQuarto = Integer.valueOf(scanner.nextLine());
                         System.out.println("Número de quartos no hotel: ");
                         int quartosVagos = Integer.valueOf(scanner.nextLine());
-                        servidor.registrarHotel(nome, local, precoQuarto, precoQuarto);
+                        servidor.registrarHotel(nome, local, precoQuarto, quartosVagos);
                         break;
                     
                     case "rv":
@@ -75,12 +77,20 @@ public class Servidor {
                         servidor.registrarVoo(data, origem, destino, companhia, precoVoo, assentosVagos);
                         break;
                         
+                    case "rp":
+                        servidor.registrarPacote();
+                        break;
+                        
                     case "lh":
                         servidor.listarHoteis();
                         break;
                     
                     case "lv":
                         servidor.listarVoos();
+                        break;
+                        
+                    case "lp":
+                        servidor.listarPacotes();
                         break;
                 }
             }

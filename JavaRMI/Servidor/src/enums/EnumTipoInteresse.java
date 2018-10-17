@@ -10,5 +10,5 @@ package enums;
  * @author a1717553
  */
 public enum EnumTipoInteresse {
-    PASSAGEM, RESERVA, PASSAGEM_RESERVA;
+    PASSAGEM, RESERVA, PACOTE;
 }

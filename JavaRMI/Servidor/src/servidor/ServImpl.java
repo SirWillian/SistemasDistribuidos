@@ -6,11 +6,13 @@
 package servidor;
 
 import enums.EnumTipoInteresse;
+import java.rmi.ConnectException;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 import recursos.*;
 
@@ -21,11 +23,13 @@ import recursos.*;
 public class ServImpl extends UnicastRemoteObject implements InterfaceServ {
     private List<Voo> listaVoos;
     private List<Hotel> listaHotels;
+    private List<Pacote> listaPacotes;
     private List<Interesse> interesseClientes;
     
     public ServImpl() throws RemoteException {
         listaVoos = new ArrayList<>();
         listaHotels = new ArrayList<>();
+        listaPacotes = new ArrayList<>();
         interesseClientes = new ArrayList<>();
     }
 
@@ -68,6 +72,22 @@ public class ServImpl extends UnicastRemoteObject implements InterfaceServ {
                         destino.equals(voo.destino) &&
                         data.isEqual(voo.data) &&
                         nPessoas<=voo.assentosVagos)
+                .collect(Collectors.toList());
+        
+        return consulta;
+    }
+    
+    @Override
+    public List<Pacote> consultarPacote(String origem, String destino, LocalDate dataIda, LocalDate dataVolta, int nPessoas, int nQuartos) throws RemoteException {
+        List<Pacote> consulta;
+        consulta = listaPacotes.stream()
+                .filter(pacote -> origem.equals(pacote.vooIda.origem) &&
+                        destino.equals(pacote.vooVolta.origem) &&
+                        dataIda.isEqual(pacote.vooIda.data) &&
+                        dataVolta.isEqual(pacote.vooVolta.data) &&
+                        nPessoas<=pacote.vooIda.assentosVagos &&
+                        nPessoas<=pacote.vooVolta.assentosVagos &&
+                        nQuartos<=pacote.hotel.quartosVagos)
                 .collect(Collectors.toList());
         
         return consulta;
@@ -142,6 +162,30 @@ public class ServImpl extends UnicastRemoteObject implements InterfaceServ {
         return false;
     }
 
+    @Override
+    public synchronized boolean comprarPacote(Pacote pacote, int nPessoas, int nQuartos) throws RemoteException {
+        if(nPessoas<=pacote.vooIda.assentosVagos &&
+            nPessoas<=pacote.vooVolta.assentosVagos &&
+            nQuartos<=pacote.hotel.quartosVagos){
+            
+            pacote.vooIda.assentosVagos-=nPessoas;
+            pacote.vooVolta.assentosVagos-=nPessoas;
+            pacote.hotel.quartosVagos-=nQuartos;
+            
+            if(pacote.vooIda.assentosVagos<=0 || pacote.vooVolta.assentosVagos<=0 || pacote.hotel.quartosVagos<=0){
+                listaPacotes.remove(pacote);
+                if(pacote.vooIda.assentosVagos<=0)
+                    listaVoos.remove(pacote.vooIda);
+                if(pacote.vooVolta.assentosVagos<=0)
+                    listaVoos.remove(pacote.vooVolta);
+                if(pacote.hotel.quartosVagos<=0)
+                    listaHotels.remove(pacote.hotel);
+            }
+            
+            return true;
+        }
+        return false;
+    }
     /**
      * Registra interesse de notificações de um cliente
      *
@@ -214,6 +258,54 @@ public class ServImpl extends UnicastRemoteObject implements InterfaceServ {
     }
     
     /**
+     * Registra um novo pacote de viagens
+     */
+    public void registrarPacote(){
+        listarVoos();
+        System.out.println("Selecione o índice do voo de ida (começando em 1): ");
+        Scanner scanner = new Scanner(System.in);
+        int escolha = Integer.valueOf(scanner.nextLine());
+        Voo voo1 = listaVoos.get(escolha-1);
+        List<Voo> listaVooVolta = listaVoos.stream()
+                .filter(voo -> voo.destino.equals(voo1.origem))
+                .collect(Collectors.toList());
+        if(listaVooVolta.isEmpty()){
+            System.out.println("Não há voos de volta para fazer o pacote");
+            return;
+        }
+            
+        for(Voo voo : listaVooVolta){
+            System.out.println(voo.toString());
+        }
+        System.out.println("Selecione o índice do voo de volta (começando em 1): ");
+        escolha = Integer.valueOf(scanner.nextLine());
+        Voo voo2 = listaVooVolta.get(escolha-1);
+        
+        List<Hotel> listaHotelPacote = listaHotels.stream()
+                .filter(hotel -> hotel.local.equals(voo2.origem))
+                .collect(Collectors.toList());
+        
+        if(listaHotelPacote.isEmpty()){
+            System.out.println("Não há hotéis no local de destino para fazer o pacote.");
+            return;
+        }
+        
+        for(Hotel hotel : listaHotelPacote){
+            System.out.println(hotel.toString());
+        }
+        
+        System.out.println("Selecione o índice do hotel (começando em 1): ");
+        escolha = Integer.valueOf(scanner.nextLine());
+        Hotel hotelPacote = listaHotels.get(escolha-1);
+        
+        int precoFinal = (int) ((voo1.preco + voo2.preco + hotelPacote.precoQuarto)*0.9);
+        Pacote novoPacote = new Pacote(voo1, voo2, hotelPacote, precoFinal);
+        listaPacotes.add(novoPacote);
+        
+        notificacaoCliente(EnumTipoInteresse.PACOTE, voo1.destino, precoFinal);
+    }
+    
+    /**
      * Exibe os hotéis registrados
      */
     public void listarHoteis(){
@@ -230,6 +322,14 @@ public class ServImpl extends UnicastRemoteObject implements InterfaceServ {
     }
     
     /**
+     * Exibe os pacotes registrados
+     */
+    public void listarPacotes(){
+        for(Pacote pacote : listaPacotes)
+            System.out.println(pacote.toString());
+    }
+    
+    /**
      * Notifica os clientes interessados
      * 
      * @param tipo
@@ -242,6 +342,9 @@ public class ServImpl extends UnicastRemoteObject implements InterfaceServ {
                 try{
                     cliente.cliente.callback("Nova oferta de " + tipo.toString() + " na qual você pode estar interessado.");
                 }
+                /*catch(ConnectException ex){
+                    interesseClientes.remove(cliente);
+                }*/
                 catch(Exception ex){
                     System.out.println(ex.getMessage());
                 }
