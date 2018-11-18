@@ -1,0 +1,13 @@
+﻿@page
+@model VooBuyModel
+@{
+    ViewData["Title"] = "Voo";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@Model.Message</h3>
+
+<h4>Sua passagem:</h4>
+<p>Nome do Hotel: @Model.passagem.origem</p>
+<p>Local: @Model.passagem.destino</p>
+<p>Companhia Aérea: @Model.passagem.companhiaIda</p>
+<p>Número de pessoas: @Model.passagem.nPessoas</p>

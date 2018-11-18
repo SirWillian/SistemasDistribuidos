@@ -1,0 +1,58 @@
+@page
+@model VooModel
+@{
+    ViewData["Title"] = "Voo";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@Model.Message</h3>
+
+<form action="/Voo/Result" method="post" >
+    @Html.AntiForgeryToken()
+    <fieldset>
+        <div>
+            <label for="ContactName">Origem do voo:</label>
+            <input type="text" name="origem" value="" />
+        </div>
+        <div>
+            <label for="ContactName">Destino do voo:</label>
+            <input type="text" name="destino" value="" />
+        </div>
+        <div>
+            <label for="Employees">Número de passageiros:</label>
+            <input type="number" name="nPessoas" value="0" />
+        </div>
+        <div>
+            <label for="Employees">Data de ida:</label>
+            @{
+                var data = DateTime.Now.Date.ToString("yyyy-MM-dd");
+            }
+            <input type="date" name="dataIda" value="@data" />
+        </div>
+        <div>
+            <label for="ContactName">Data de volta:</label>
+            <input id="dataDeVolta" type="date" name="dataVolta" value="@data" disabled/>
+        </div>
+        <div>
+            <label for="ContactName">Ida e volta?</label>
+            <input id="idaEVolta" type="checkbox" name="idaVolta"/>
+        </div>
+        <div>
+            <label>&nbsp;</label>
+            <input type="submit" value="Submit" class="submit" />
+        </div>
+    </fieldset>
+</form>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+    $(function () {
+        $("#idaEVolta").click(function () {
+            if ($(this).is(':checked')) {
+                $("#dataDeVolta").prop('disabled',false);
+            }
+            else {
+                $("#dataDeVolta").prop('disabled',true);
+            }
+        });
+    });
+</script>

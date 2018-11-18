@@ -1,0 +1,13 @@
+﻿@page
+@model HotelBuyModel
+@{
+    ViewData["Title"] = "Hotel";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@Model.Message</h3>
+
+<h4>Sua reserva:</h4>
+<p>Nome do Hotel: @Model.reserva.nome</p>
+<p>Local: @Model.reserva.destino</p>
+<p>Número de quartos alocados: @Model.reserva.nQuartos</p>
+<p>Número de pessoas: @Model.reserva.nPessoas</p>

@@ -1,0 +1,57 @@
+@page
+@model AdminHotelModel
+@{
+    ViewData["Title"] = "Admin";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@Model.Message</h3>
+
+<form method="post" >
+    @Html.AntiForgeryToken()
+    <fieldset>
+        <legend>Insira Hotel</legend>
+        <div>
+            <label for="CompanyName">Nome:</label>
+            <input type="text" name="nome" value="" />
+        </div>
+        <div>
+            <label for="ContactName">Local:</label>
+            <input type="text" name="destino" value="" />
+        </div>
+        <div>
+            <label for="Employees">Preço por Quarto:</label>
+            <input type="number" name="precoQuarto" value="0" />
+        </div>
+        <div>
+            <label for="Employees">Quartos Vagos:</label>
+            <input type="number" name="quartosVagos" value="0" />
+        </div>
+        <div>
+            <label>&nbsp;</label>
+            <input type="submit" value="Submit" class="submit" />
+        </div>
+    </fieldset>
+</form>
+
+<h2>Hotéis registrados</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome do Hotel</th>
+            <th>Local</th>
+            <th>Preço por Quarto</th>
+            <th>Quartos Vagos</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hotel in @Model.hotels)
+        {
+            <tr>
+                <td>@hotel.nome</td>
+                <td>@hotel.local</td>
+                <td>@hotel.precoQuarto</td>
+                <td>@hotel.quartosVagos</td>
+            </tr>
+        }
+    </tbody>
+</table>

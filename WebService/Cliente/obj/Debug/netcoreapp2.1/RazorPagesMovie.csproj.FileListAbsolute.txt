@@ -1,0 +1,82 @@
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\bin\Debug\netcoreapp2.1\RazorPagesMovie.deps.json
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\bin\Debug\netcoreapp2.1\RazorPagesMovie.runtimeconfig.json
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\bin\Debug\netcoreapp2.1\RazorPagesMovie.runtimeconfig.dev.json
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\bin\Debug\netcoreapp2.1\RazorPagesMovie.dll
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\bin\Debug\netcoreapp2.1\RazorPagesMovie.pdb
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\bin\Debug\netcoreapp2.1\RazorPagesMovie.Views.dll
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\bin\Debug\netcoreapp2.1\RazorPagesMovie.Views.pdb
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\RazorPagesMovie.csprojAssemblyReference.cache
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\RazorPagesMovie.csproj.CoreCompileInputs.cache
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\RazorPagesMovie.RazorAssemblyInfo.cache
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\RazorPagesMovie.RazorAssemblyInfo.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\RazorPagesMovie.AssemblyInfoInputs.cache
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\RazorPagesMovie.AssemblyInfo.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\RazorPagesMovie.TagHelpers.input.cache
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\RazorPagesMovie.TagHelpers.output.cache
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\RazorPagesMovie.RazorCoreGenerate.cache
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\About.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\Contact.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\Error.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\Index.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\Privacy.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_CookieConsentPartial.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_Layout.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_ValidationScriptsPartial.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\_ViewImports.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\_ViewStart.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\RazorPagesMovie.RazorTargetAssemblyInfo.cache
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\RazorPagesMovie.RazorTargetAssemblyInfo.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\RazorPagesMovie.Views.pdb
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\RazorPagesMovie.dll
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\RazorPagesMovie.pdb
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\RazorPagesMovie.csproj.CopyComplete
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\Hotel\Index.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\Hotel\Result.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\Hotel\Buy.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\Admin\Hotel.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\Admin\Index.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\Admin\Voo.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\Voo\Buy.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\Voo\Index.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\Webapp test\RazorPagesMovie\obj\Debug\netcoreapp2.1\Razor\Pages\Voo\Result.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\bin\Debug\netcoreapp2.1\RazorPagesMovie.deps.json
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\bin\Debug\netcoreapp2.1\RazorPagesMovie.runtimeconfig.json
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\bin\Debug\netcoreapp2.1\RazorPagesMovie.runtimeconfig.dev.json
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\bin\Debug\netcoreapp2.1\RazorPagesMovie.dll
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\bin\Debug\netcoreapp2.1\RazorPagesMovie.pdb
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\bin\Debug\netcoreapp2.1\RazorPagesMovie.Views.dll
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\bin\Debug\netcoreapp2.1\RazorPagesMovie.Views.pdb
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\RazorPagesMovie.csprojAssemblyReference.cache
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\RazorPagesMovie.csproj.CoreCompileInputs.cache
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\RazorPagesMovie.RazorAssemblyInfo.cache
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\RazorPagesMovie.RazorAssemblyInfo.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\RazorPagesMovie.AssemblyInfoInputs.cache
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\RazorPagesMovie.AssemblyInfo.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\RazorPagesMovie.TagHelpers.input.cache
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\RazorPagesMovie.TagHelpers.output.cache
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\RazorPagesMovie.RazorCoreGenerate.cache
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\About.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\Admin\Hotel.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\Admin\Index.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\Admin\Voo.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\Contact.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\Error.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\Hotel\Buy.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\Hotel\Index.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\Hotel\Result.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\Index.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\Privacy.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_CookieConsentPartial.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_Layout.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_ValidationScriptsPartial.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\Voo\Buy.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\Voo\Index.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\Voo\Result.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\_ViewImports.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\Razor\Pages\_ViewStart.g.cshtml.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\RazorPagesMovie.RazorTargetAssemblyInfo.cache
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\RazorPagesMovie.RazorTargetAssemblyInfo.cs
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\RazorPagesMovie.Views.pdb
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\RazorPagesMovie.dll
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\RazorPagesMovie.pdb
+D:\Dados\UTFPR\Sistemas Distribuídos\SistemasDistribuidos\WebService\Cliente\obj\Debug\netcoreapp2.1\RazorPagesMovie.csproj.CopyComplete

@@ -1,0 +1,167 @@
+@page
+@model VooResultModel
+@{
+    ViewData["Title"] = "Voo";
+}
+<h2>@ViewData["Title"]</h2>
+
+<form action="/Voo/Result" method="post" >
+    @Html.AntiForgeryToken()
+    <fieldset>
+        <div>
+            <label for="ContactName">Origem do voo:</label>
+            <input type="text" name="origem" value="" />
+        </div>
+        <div>
+            <label for="ContactName">Destino do voo:</label>
+            <input type="text" name="destino" value="" />
+        </div>
+        <div>
+            <label for="Employees">Número de passageiros:</label>
+            <input type="number" name="nPessoas" value="0" />
+        </div>
+        <div>
+            <label for="Employees">Data de ida:</label>
+            @{
+                var data = DateTime.Now.Date.ToString("yyyy-MM-dd");
+            }
+            <input type="date" name="dataIda" value="@data" />
+        </div>
+        <div>
+            <label for="ContactName">Data de volta:</label>
+            <input id="dataDeVolta" type="date" name="dataVolta" value="@data" disabled/>
+        </div>
+        <div>
+            <label for="ContactName">Ida e volta?</label>
+            <input id="idaEVolta" type="checkbox" name="idaVolta"/>
+        </div>
+        <div>
+            <label>&nbsp;</label>
+            <input type="submit" value="Submit" class="submit"/>
+        </div>
+    </fieldset>
+</form>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+    $(function () {
+        $("#idaEVolta").click(function () {
+            if ($(this).is(':checked')) {
+                $("#dataDeVolta").prop('disabled',false);
+            }
+            else {
+                $("#dataDeVolta").prop('disabled',true);
+            }
+        });
+    });
+</script>
+
+<h3>@Model.Message</h3>
+
+<h4>@Model.VoosIdaHeader</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Origem do Voo</th>
+            <th>Destino do Voo</th>
+            <th>Companhia Aérea</th>
+            <th>Data do Voo</th>
+            <th>Assentos Vagos</th>
+            <th>Preço por passageiro</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var voo in @Model.voosIda)
+        {
+            <tr>
+                <td><input type="radio" class="ida" id="@Model.voosIda.IndexOf(voo)"></td>
+                <td>@voo.origem</td>
+                <td>@voo.destino</td>
+                <td id="companhia">@voo.companhia</td>
+                <td>@Html.DisplayFor(modelItem => voo.data)</td>
+                <td>@voo.assentosVagos</td>
+                <td>@voo.preco</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<script>
+    $(function () {
+        $(".ida").click(function () {
+            var id = $(this).attr('id');
+            $(".ida").prop("checked",false)
+            $(this).prop("checked",true)
+
+            $("#companhiaIda").val($(this).parent().parent().find("#companhia").text())
+            if($(".volta").length>0){
+                if($(".volta:checked").length>0)
+                    $("#comprar").prop("disabled",false)
+            }
+            else{
+                $("#comprar").prop("disabled",false)
+            }
+            })
+        });
+</script>
+@if(Model.voosVolta!=null)
+{
+    <text>
+    <h4>@Model.VoosVoltaHeader</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Origem do Voo</th>
+                <th>Destino do Voo</th>
+                <th>Companhia Aérea</th>
+                <th>Data do Voo</th>
+                <th>Assentos Vagos</th>
+                <th>Preço por passageiro</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var voo in Model.voosVolta)
+            {
+                <text>
+                <tr>
+                    <td><input type="radio" class="volta" id="@Model.voosVolta.IndexOf(voo)"></td>
+                    <td>@voo.origem</td>
+                    <td>@voo.destino</td>
+                    <td id="companhia">@voo.companhia</td>
+                    <td>@Html.DisplayFor(modelItem => voo.data)</td>
+                    <td>@voo.assentosVagos</td>
+                    <td>@voo.preco</td>
+                </tr>
+                </text>
+            }
+        </tbody>
+    </table>
+    <script>
+        $(function () {
+            $(".volta").click(function () {
+                var id = $(this).attr('id');
+                $(".volta").prop("checked",false)
+                $(this).prop("checked",true)
+
+                $("#companhiaVolta").val($(this).parent().parent().find("#companhia").text())
+                if($(".ida").length>0){
+                    if($(".ida:checked").length>0)
+                        $("#comprar").prop("disabled",false)
+                }
+                else{
+                    $("#comprar").prop("disabled",false)
+                }
+                })
+            });
+    </script>
+    </text>
+}
+
+<form action="./Buy" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" id="companhiaIda" name="companhiaIda" value="">
+    <input type="hidden" id="companhiaVolta" name="companhiaVolta" value="">
+    <input type="submit" id="comprar" value="Comprar" disabled>
+</form>
+

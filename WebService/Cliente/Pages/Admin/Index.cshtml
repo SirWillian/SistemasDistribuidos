@@ -1,0 +1,16 @@
+@page
+@model AdminModel
+@{
+    ViewData["Title"] = "Admin";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@Model.Message</h3>
+
+<p>Página para adição de novos hotéis e voos no sistema.</p>
+
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        <li><a asp-page="./Hotel">Hotel</a></li>
+        <li><a asp-page="./Voo">Voo</a></li>
+    </ul>
+</div>
